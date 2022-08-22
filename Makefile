@@ -6,3 +6,5 @@ install:
 	  bundle && bundle exec rake assets:precompile
 tests:
 		bin/rails test
+generate_env:
+		cp .env.example .env
