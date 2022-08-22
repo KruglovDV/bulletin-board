@@ -1,0 +1,8 @@
+.container.mb-2
+  .d-flex.flex-wrap.align-items-center.py-2.border-bottom
+    .navbar.navbar-expand-md.navbar-light.me-auto
+    ul.nav.nav-pills
+      li.nav-item.me-2
+        - unless logged_in?
+          = link_to auth_request_path(:github), method: :post, class: 'nav-link text-dark' do
+            i.fa-brands.fa-github
