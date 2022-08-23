@@ -4,5 +4,7 @@
     ul.nav.nav-pills
       li.nav-item.me-2
         - unless signed_in?
-          = link_to auth_request_path(:github), method: :post, class: 'nav-link text-dark' do
+          = link_to auth_request_path(:github), method: :post do
             i.fa-brands.fa-github
+        - else
+          = link_to t('.exit'), sign_out_path, method: :delete, class: 'nav-link text-dark'

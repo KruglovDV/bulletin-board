@@ -5,7 +5,12 @@ module Web
     def callback
       @user = User.find_or_initialize_by(user_params)
       session[:user_id] = @user.id if @user.save
-      redirect_to root_path
+      redirect_to root_path, notice: t('.signed_in')
+    end
+
+    def sign_out
+      session[:user_id] = nil
+      redirect_to root_path, notice: t('.signed_out')
     end
 
     private

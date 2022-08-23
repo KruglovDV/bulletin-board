@@ -1,0 +1,7 @@
+en:
+  web:
+    auth:
+      callback:
+        signed_in: 'Successfully signed in'
+      sign_out:
+        signed_out: 'Successfully signed out'

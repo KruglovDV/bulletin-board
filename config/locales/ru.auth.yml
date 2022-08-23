@@ -1,0 +1,7 @@
+ru:
+  web:
+    auth:
+      callback:
+        signed_in: 'Вход успешно выполнен'
+      sign_out:
+        signed_out: 'Выход успешно выполнен'
