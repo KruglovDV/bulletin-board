@@ -1,6 +1,7 @@
 .container.mb-2
   .d-flex.flex-wrap.align-items-center.py-2.border-bottom
     .navbar.navbar-expand-md.navbar-light.me-auto
+      = link_to t('.main_page'), root_path, class: 'navbar-brand me-md-4'
     ul.nav.nav-pills
       li.nav-item.me-2
         - unless signed_in?
