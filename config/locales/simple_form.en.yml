@@ -1,0 +1,14 @@
+en:
+  helpers:
+    submit:
+      bulletin:
+        create: "Create %{model}"
+        update: "Save Changes"
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"

@@ -1,0 +1,24 @@
+ru:
+  activerecord:
+    models:
+      bulletin: Объявление
+      user: Пользователь
+      category: Категория
+    attributes:
+      bulletin:
+        title: Заголовок
+        description: Описание
+        category: Категория
+      category:
+        name: Название
+    errors:
+      models:
+        bulletin:
+          attributes:
+            title:
+              blank: не может быть пустым
+              too_long: слишком длинный
+            description:
+              blank: не может быть пустым
+            category:
+              required: не может быть пустым

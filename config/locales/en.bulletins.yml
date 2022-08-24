@@ -3,3 +3,7 @@ en:
     bulletins:
       index:
         bulletins_header: Bulletins
+      new:
+        add_bulletin: Add bulletin
+      create:
+        bulletin_created: Bulletin created

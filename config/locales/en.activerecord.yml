@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    models:
+      bulletin: Bulletin
+      user: User
+      category: Category
+    attributes:
+      bulletin:
+        title: Title
+        description: Description
+        category: Category
+      category:
+        name: Name
+    errors:
+      models:
+        bulletin:
+          attributes:
+            title:
+              blank: can't be blank
+              too_long: too long
+            description:
+              blank: can't be blank
+            category:
+              required: can't be blank

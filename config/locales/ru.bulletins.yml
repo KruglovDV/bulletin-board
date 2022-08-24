@@ -3,3 +3,7 @@ ru:
     bulletins:
       index:
         bulletins_header: Объявления
+      new:
+        add_bulletin: Добавить объявление
+      create:
+        bulletin_created: Объявление создано
