@@ -3,7 +3,7 @@
 module Web
   class BulletinsController < ApplicationController
     def index
-      @bulletins = Bulletin.all.order(created_ad: :desc)
+      @bulletins = Bulletin.all.order('created_at DESC')
     end
 
     def new
@@ -22,7 +22,7 @@ module Web
     private
 
     def bulletin_params
-      params.require(:bulletin).permit(:title, :description, :category_id)
+      params.require(:bulletin).permit(:title, :description, :category_id, :image)
     end
   end
 end

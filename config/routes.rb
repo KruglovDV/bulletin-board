@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
     delete 'auth', to: 'auth#sign_out', as: :sign_out
 
-    resources :bulletins, only: %i[new create]
+    resources :bulletins, only: %i[new create show]
   end
 end

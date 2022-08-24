@@ -9,6 +9,7 @@ en:
         title: Title
         description: Description
         category: Category
+        image: Image
       category:
         name: Name
     errors:
@@ -22,3 +23,6 @@ en:
               blank: can't be blank
             category:
               required: can't be blank
+            image:
+              blank: can't be blank
+            

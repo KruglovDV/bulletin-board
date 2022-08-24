@@ -9,6 +9,7 @@ ru:
         title: Заголовок
         description: Описание
         category: Категория
+        image: Картинка
       category:
         name: Название
     errors:
@@ -21,4 +22,6 @@ ru:
             description:
               blank: не может быть пустым
             category:
-              required: не может быть пустым
+              required: не может быть пустой
+            image:
+              blank: не может быть пустой
