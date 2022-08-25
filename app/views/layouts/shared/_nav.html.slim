@@ -5,6 +5,9 @@
       - if policy(Bulletin).new?
         = link_to t('.add'), new_bulletin_path, class: 'nav-link text-dark'
     ul.nav.nav-pills
+      - if policy(:admin).index?
+        lin.nav-item.me-2
+          = link_to t('.admin'), admin_root_path, class: 'nav-link text-dark'
       li.nav-item.me-2
         - if signed_in?
           = link_to t('.exit'), sign_out_path, method: :delete, class: 'nav-link text-dark'

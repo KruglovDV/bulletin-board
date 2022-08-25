@@ -1,3 +1,8 @@
+admin:
+  name: admin_user
+  email: admin@user.com
+  admin: true
+
 john:
   name: John
   email: john@doe.com

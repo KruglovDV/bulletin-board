@@ -1,0 +1,7 @@
+en:
+  web:
+    admin:
+      admin_nav:
+        on_moderation: on moderation
+        all_bulletins: all bulletins
+        all_categories: all categories

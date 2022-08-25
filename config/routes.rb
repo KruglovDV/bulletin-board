@@ -8,5 +8,11 @@ Rails.application.routes.draw do
     delete 'auth', to: 'auth#sign_out', as: :sign_out
 
     resources :bulletins, only: %i[new create show]
+
+    namespace :admin do
+      root 'home#index'
+      resources :bulletins, only: %i[index]
+      resources :categories
+    end
   end
 end

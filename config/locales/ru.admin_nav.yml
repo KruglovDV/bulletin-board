@@ -1,0 +1,7 @@
+ru:
+  web:
+    admin:
+      admin_nav:
+        on_moderation: Объявления на модерации
+        all_bulletins: Все объявления
+        all_categories: Все категории
