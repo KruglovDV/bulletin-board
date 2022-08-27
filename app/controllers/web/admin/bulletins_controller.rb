@@ -2,6 +2,8 @@
 
 module Web::Admin
   class BulletinsController < ApplicationController
-    def index; end
+    def index
+      @bulletins = Bulletin.all.order('created_at DESC')
+    end
   end
 end

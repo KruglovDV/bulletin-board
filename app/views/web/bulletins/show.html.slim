@@ -1,0 +1,14 @@
+.col-md-12
+  .container
+    .p-3.align-items-center.border.shadow.bg-white.rounded-3
+      .row
+        .p-3.p-lg-5.pt-lg-0
+          .mb-4
+            h1 = @bulletin.title
+            hr
+          div
+            = image_tag @bulletin.image.variant(resize_to_limit: [200, 200])
+          .mt-3
+            = @bulletin.description
+          .mt-3
+            = @bulletin.user.name

@@ -1,0 +1,10 @@
+en:
+  web:
+    admin:
+      bulletins:
+        index:
+          bulletins: Bulletins
+          name: Name
+          state: State
+          published_date: Published date
+          actions: Actions

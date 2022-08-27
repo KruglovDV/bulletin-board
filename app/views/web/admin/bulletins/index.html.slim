@@ -1,2 +1,18 @@
 = render 'web/admin/admin_nav'
 .col-md-9
+  h1.h2.mb-4 = t('.bulletins')
+  .mt-2
+    table.table.table-borderless
+      thead
+        tr
+          th = t('.name')
+          th = t('.state')
+          th = t('.published_date')
+          th = t('.actions')
+      tbody
+        - @bulletins.each do |bulletin|
+          tr
+            td = link_to bulletin.title, bulletin_path(bulletin)
+            td = ''
+            td = distance_of_time_in_words_to_now bulletin.created_at
+            td = ''

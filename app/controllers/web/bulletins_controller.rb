@@ -6,6 +6,10 @@ module Web
       @bulletins = Bulletin.all.order('created_at DESC')
     end
 
+    def show
+      @bulletin = Bulletin.find(params[:id])
+    end
+
     def new
       @bulletin = Bulletin.new
     end

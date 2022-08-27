@@ -1,0 +1,10 @@
+en:
+  web:
+    admin:
+      bulletins:
+        index:
+          bulletins: Объявления
+          name: Название
+          state: Состояние
+          published_date: Дата публикации
+          actions: Действия
