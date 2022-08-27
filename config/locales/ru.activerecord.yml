@@ -25,3 +25,7 @@ ru:
               required: не может быть пустой
             image:
               blank: не может быть пустой
+        category:
+          attributes:
+            name:
+              blank: не может быть пустым

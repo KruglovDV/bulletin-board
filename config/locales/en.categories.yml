@@ -1,0 +1,24 @@
+en:
+  web:
+    admin:
+      categories:
+        index:
+          categories: Categories
+          add_category: Add category
+          id: Id
+          name: Name
+          actions: Actions
+          edit: Edit
+          delete: Delete
+          are_you_sure: Are you sure?
+        new:
+          new_category: New category
+        create:
+          category_created: Category updated successfully
+        edit:
+          edit_category: Edit category
+        update:
+          category_updated: Category updated successfully
+        destroy:
+          category_deleted: Category deleted successfully
+        

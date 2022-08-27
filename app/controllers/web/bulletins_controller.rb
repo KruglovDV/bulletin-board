@@ -15,7 +15,7 @@ module Web
       if @bulletin.save
         redirect_to root_path, notice: t('.bulletin_created')
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 

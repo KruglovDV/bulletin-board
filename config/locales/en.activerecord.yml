@@ -25,4 +25,8 @@ en:
               required: can't be blank
             image:
               blank: can't be blank
+        category:
+          attributes:
+            name:
+              blank: can't be blank
             

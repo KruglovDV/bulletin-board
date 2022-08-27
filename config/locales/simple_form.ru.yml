@@ -4,6 +4,9 @@ ru:
       bulletin:
         create: "Создать %{model}"
         update: "Сохранить изменения"
+      category:
+        create: "Создать категорию"
+        update: "Сохранить изменения"
   simple_form:
     "yes": 'Yes'
     "no": 'No'

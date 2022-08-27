@@ -1,0 +1,23 @@
+ru:
+  web:
+    admin:
+      categories:
+        index:
+          categories: Категории
+          add_category: Добавить категорию
+          id: Id
+          name: Название
+          actions: Действия
+          edit: Редактировать
+          delete: Удалить
+          are_you_sure: Вы уверенны?
+        new:
+          new_category: Новая категория
+        create:
+          category_created: Категория суспешно создана
+        edit:
+          edit_category: Редактировать категорию
+        update:
+          category_updated: Категория успешно обновлена
+        destroy:
+          category_deleted: Категория успешно удалена
