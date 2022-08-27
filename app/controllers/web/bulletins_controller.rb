@@ -11,6 +11,7 @@ module Web
     end
 
     def new
+      authorize Bulletin
       @bulletin = Bulletin.new
     end
 
@@ -26,6 +27,7 @@ module Web
 
     def edit
       @bulletin = current_user.bulletins.find(params[:id])
+      authorize @bulletin
     end
 
     def update
