@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AdminPolicy
+class ProfilePolicy
   attr_reader :user
 
   def initialize(user, _record)
@@ -8,6 +8,6 @@ class AdminPolicy
   end
 
   def index?
-    user&.admin?
+    user
   end
 end

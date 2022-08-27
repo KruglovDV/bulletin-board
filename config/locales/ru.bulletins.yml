@@ -7,3 +7,7 @@ ru:
         add_bulletin: Добавить объявление
       create:
         bulletin_created: Объявление создано
+      edit:
+        edit_bulletin: Редактировать объявление
+      update:
+        bulletin_updated: Объявление успешно обновлено

@@ -1,0 +1,14 @@
+ru:
+  web:
+    profile:
+      index:
+        my_bulletins: Мои объявления
+        add_bulletin: Добавить обявление
+        name: Название
+        state: Состояние
+        published_date: Дата публикации
+        actions: Действия
+        show: Показать
+        archive: В архив
+        edit: Редактировать
+        moderate: На модерацию

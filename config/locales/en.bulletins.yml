@@ -7,3 +7,7 @@ en:
         add_bulletin: Add bulletin
       create:
         bulletin_created: Bulletin created
+      edit:
+        edit_bulletin: Edit bulletin
+      update:
+        bulletin_updated: Bulletin successfully updated

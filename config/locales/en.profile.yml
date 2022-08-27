@@ -1,0 +1,14 @@
+en:
+  web:
+    profile:
+      index:
+        my_bulletins: My bulletins
+        add_bulletin: Add bulletin
+        name: Name
+        state: State
+        published_date: Published date
+        actions: Actions
+        show: Show
+        archive: Archive
+        edit: Edit
+        moderate: Moderate

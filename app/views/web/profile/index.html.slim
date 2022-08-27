@@ -1,0 +1,32 @@
+.col-md-12
+  .container
+    .p-3.align-items-center.border.shadow.bg-white.rounded-3
+      .row
+        .p-3.p-lg-5.pt-lg-0
+          .mb-4
+            h1 = t('.my_bulletins')
+            hr
+          .mt-3
+            = link_to t('.add_bulletin'), new_bulletin_path
+          .mt-3
+            table.table.table-borderless
+              thead
+                tr
+                  th = t('.name')
+                  th = t('.state')
+                  th = t('.published_date')
+                  th = t('.actions')
+              tbody
+                - @bulletins.each do |bulletin|
+                  tr
+                    td = bulletin.title
+                    td = t("bulletin.states.#{bulletin.aasm_state}")
+                    td = distance_of_time_in_words_to_now bulletin.created_at
+                    td
+                      = link_to t('.show'), bulletin_path(bulletin), class: 'me-1'
+                      - if policy(bulletin).edit?
+                        = link_to t('.edit'), edit_bulletin_path(bulletin), class: 'me-1'
+                      - if policy(bulletin).moderate?
+                        = link_to t('.moderate'), moderate_bulletin_path(bulletin), class: 'me-1', method: :patch
+                      - if policy(bulletin).archive?
+                        = link_to t('.archive'), archive_bulletin_path(bulletin), method: :patch
