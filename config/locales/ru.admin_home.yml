@@ -1,0 +1,12 @@
+ru:
+  web:
+    admin:
+      home:
+        index:
+          bulletins_on_moderation: Объявления на модерации
+          name: Название
+          published_date: Дата публикации
+          actions: Действия
+          publish: Опубликовать
+          reject: Вернуть
+          archive: В архив

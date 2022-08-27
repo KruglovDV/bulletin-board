@@ -1,4 +1,4 @@
-en:
+ru:
   web:
     admin:
       bulletins:
@@ -8,3 +8,5 @@ en:
           state: Состояние
           published_date: Дата публикации
           actions: Действия
+          show: Показать
+          archive: Архивировать

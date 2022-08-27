@@ -3,7 +3,7 @@
 module Web
   class BulletinsController < ApplicationController
     def index
-      @bulletins = Bulletin.all.order('created_at DESC')
+      @bulletins = Bulletin.published.order('created_at DESC')
     end
 
     def show

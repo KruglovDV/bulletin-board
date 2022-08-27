@@ -1,12 +1,12 @@
 en:
   web:
     admin:
-      bulletins:
+      home:
         index:
-          bulletins: Bulletins
+          bulletins_on_moderation: Bulletins on moderation
           name: Name
-          state: State
           published_date: Published date
           actions: Actions
-          show: Show
+          publish: Publish
+          reject: Reject
           archive: Archive

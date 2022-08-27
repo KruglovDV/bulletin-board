@@ -5,3 +5,4 @@ bool:
   description: bool
   category: sport
   user: john
+  aasm_state: draft

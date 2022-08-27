@@ -2,6 +2,8 @@
 
 module Web::Admin
   class HomeController < ApplicationController
-    def index; end
+    def index
+      @bulletins = Bulletin.under_moderation
+    end
   end
 end

@@ -1,2 +1,22 @@
 = render 'web/admin/admin_nav'
 .col-md-9
+  h1.h2.mb-4 = t('.bulletins_on_moderation')
+  .mt-2
+    table.table.table-borderless
+      thead
+        tr
+          th = t('.name')
+          th = t('.published_date')
+          th = t('.actions')
+      tbody
+        - @bulletins.each do |bulletin|
+          tr
+            td = link_to bulletin.title, bulletin_path(bulletin)
+            td = distance_of_time_in_words_to_now bulletin.created_at
+            td
+              - if policy(bulletin).publish?
+                = link_to t('.publish'), publish_admin_bulletin_path(bulletin), class: 'me-1', method: :patch
+              - if policy(bulletin).reject?
+                = link_to t('.reject'), reject_admin_bulletin_path(bulletin), class: 'me-1', method: :patch
+              - if policy(bulletin).archive?
+                = link_to t('.archive'), archive_admin_bulletin_path(bulletin), class: 'text-danger', method: :patch
