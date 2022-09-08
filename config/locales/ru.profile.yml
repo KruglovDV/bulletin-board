@@ -12,3 +12,6 @@ ru:
         archive: В архив
         edit: Редактировать
         moderate: На модерацию
+        search_by_name: Поиск по названию
+        reset: Сбросить
+        select_state: Выберите состояние

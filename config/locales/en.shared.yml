@@ -1,0 +1,7 @@
+en:
+  web:
+    shared:
+      bulletins_search:
+        search_by_name: Search by name
+        select_state: Select state
+        reset: Reset

@@ -8,6 +8,7 @@
             hr
           .mt-3
             = link_to t('.add_bulletin'), new_bulletin_path
+          = render 'web/shared/bulletins_search', search: @q, url: profile_path, states: @states
           .mt-3
             table.table.table-borderless
               thead

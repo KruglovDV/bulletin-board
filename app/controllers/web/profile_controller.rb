@@ -4,7 +4,9 @@ module Web
   class ProfileController < ApplicationController
     def index
       authorize :profile, :index?
-      @bulletins = current_user.bulletins
+      @q = current_user.bulletins.ransack(params[:q])
+      @bulletins = @q.result
+      @states = Bulletin.aasm.states.map(&:name)
     end
   end
 end

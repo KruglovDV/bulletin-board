@@ -3,6 +3,9 @@ en:
     bulletins:
       index:
         bulletins_header: Bulletins
+        reset: Reset
+        search_by_name: Search by name
+        select_category: Select category
       new:
         add_bulletin: Add bulletin
       create:

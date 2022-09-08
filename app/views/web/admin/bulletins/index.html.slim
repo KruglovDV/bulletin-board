@@ -1,6 +1,7 @@
 = render 'web/admin/admin_nav'
 .col-md-9
   h1.h2.mb-4 = t('.bulletins')
+  = render 'web/shared/bulletins_search', search: @q, url: admin_bulletins_path, states: @states
   .mt-2
     table.table.table-borderless
       thead

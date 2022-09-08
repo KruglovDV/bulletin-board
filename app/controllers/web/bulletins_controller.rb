@@ -3,7 +3,9 @@
 module Web
   class BulletinsController < ApplicationController
     def index
-      @bulletins = Bulletin.published.order('created_at DESC')
+      @q = Bulletin.ransack(params[:q])
+      @bulletins = @q.result.with_attached_image.published.order('created_at DESC')
+      @categories = Category.all
     end
 
     def show

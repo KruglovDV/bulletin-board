@@ -1,0 +1,7 @@
+ru:
+  web:
+    shared:
+      bulletins_search:
+        search_by_name: Поиск по названию
+        select_state: Выберите состояние
+        reset: Сбросить

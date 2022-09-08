@@ -3,6 +3,9 @@ ru:
     bulletins:
       index:
         bulletins_header: Объявления
+        reset: Сбросить
+        search_by_name: Поиск по названию
+        select_category: Выбрать категорию
       new:
         add_bulletin: Добавить объявление
       create:

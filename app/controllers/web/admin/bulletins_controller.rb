@@ -3,7 +3,9 @@
 module Web::Admin
   class BulletinsController < ApplicationController
     def index
-      @bulletins = Bulletin.all.order('created_at DESC')
+      @q = Bulletin.ransack(params[:q])
+      @bulletins = @q.result.order('created_at DESC')
+      @states = Bulletin.aasm.states.map(&:name)
     end
 
     def archive
