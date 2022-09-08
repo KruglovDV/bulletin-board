@@ -2,16 +2,16 @@ en:
   helpers:
     submit:
       bulletin:
-        create: "Create %{model}"
-        update: "Save Changes"
+        create: Create %{model}
+        update: Save Changes
       category:
-        create: "Create %{model}"
-        update: "Save Changes"
+        create: Create %{model}
+        update: Save Changes
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    yes: 'Yes'
+    no: 'No'
     required:
-      text: 'required'
+      text: required
       mark: '*'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: 'Please review the problems below:'

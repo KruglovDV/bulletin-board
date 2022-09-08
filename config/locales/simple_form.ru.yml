@@ -2,16 +2,16 @@ ru:
   helpers:
     submit:
       bulletin:
-        create: "Создать %{model}"
-        update: "Сохранить изменения"
+        create: Создать %{model}
+        update: Сохранить изменения
       category:
-        create: "Создать категорию"
-        update: "Сохранить изменения"
+        create: Создать категорию
+        update: Сохранить изменения
   simple_form:
-    "yes": 'Да'
-    "no": 'Нет'
+    yes: Да
+    no: Нет
     required:
-      text: 'обязатнльно'
+      text: обязатнльно
       mark: '*'
     error_notification:
-      default_message: Пожалуйста посмотрите проблемы ниже:"
+      default_message: 'Пожалуйста посмотрите проблемы ниже:'

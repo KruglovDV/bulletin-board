@@ -2,6 +2,6 @@ en:
   web:
     auth:
       callback:
-        signed_in: 'Successfully signed in'
+        signed_in: Successfully signed in
       sign_out:
-        signed_out: 'Successfully signed out'
+        signed_out: Successfully signed out

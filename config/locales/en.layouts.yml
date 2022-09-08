@@ -3,8 +3,8 @@ en:
     shared:
       nav:
         sign_in: Sign in
-        exit: 'Exit'
-        main_page: 'Main page'
+        exit: Exit
+        main_page: Bulletins board
         add: Add
         admin: Admin
         my_bulletins: My bulletins

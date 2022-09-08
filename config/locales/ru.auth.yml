@@ -2,6 +2,6 @@ ru:
   web:
     auth:
       callback:
-        signed_in: 'Вход успешно выполнен'
+        signed_in: Вход успешно выполнен
       sign_out:
-        signed_out: 'Выход успешно выполнен'
+        signed_out: Выход успешно выполнен
