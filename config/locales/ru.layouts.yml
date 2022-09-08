@@ -2,8 +2,9 @@ ru:
   layouts:
     shared:
       nav:
-        exit: 'Выход'
-        main_page: 'Главная'
+        sign_in: Вход
+        exit: Выход
+        main_page: Главная
         add: Добавить
         admin: Админка
         my_bulletins: Мои объявления
