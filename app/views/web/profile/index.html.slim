@@ -31,3 +31,6 @@
                         = link_to t('.moderate'), moderate_bulletin_path(bulletin), class: 'me-1', method: :patch
                       - if policy(bulletin).archive?
                         = link_to t('.archive'), archive_bulletin_path(bulletin), method: :patch
+          nav
+            .mt-2
+              = paginate @bulletins

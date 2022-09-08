@@ -1,0 +1,7 @@
+ru:
+  views:
+    pagination:
+      first: Начало
+      last: Конец
+      previous: Назад
+      next: Дальше

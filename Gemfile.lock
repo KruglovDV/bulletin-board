@@ -131,6 +131,18 @@ GEM
     jmespath (1.6.1)
     json (2.6.2)
     jwt (2.4.1)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -342,6 +354,7 @@ DEPENDENCIES
   flash_rails_messages
   image_processing
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   minitest-power_assert
   omniauth-github

@@ -25,3 +25,6 @@
                 method: :delete, \
                 class: 'text-danger me-1', \
                 data: { confirm: t('.are_you_sure') }
+  nav
+    .mt-2
+      = paginate @categories

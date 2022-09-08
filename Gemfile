@@ -35,6 +35,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'faker'
 gem 'flash_rails_messages'
+gem 'kaminari'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'ransack'
