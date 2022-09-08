@@ -4,7 +4,7 @@ module Web
   class BulletinsController < ApplicationController
     def index
       @q = Bulletin.ransack(params[:q])
-      @bulletins = @q.result.with_attached_image.published.order('created_at DESC').page(params[:page]).per(1)
+      @bulletins = @q.result.with_attached_image.published.order('created_at DESC').page(params[:page])
       @categories = Category.all
     end
 
