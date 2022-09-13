@@ -1,7 +1,7 @@
-bool_picture_blob:
-  key: utwvxkle7fzhocmxp276ylshu41r
-  filename: bool.jpg
-  content_type: image/jpeg
+ball_picture_blob:
+  key: aabbWNGW1VrxZ8Eu4zmyw13A
+  filename: ball.png
+  content_type: image/png
   metadata: '{"identified":true,"analyzed":true}'
   byte_size: 1000
   checksum: fdUivZUf74Y6pjAiemuvlg==

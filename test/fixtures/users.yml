@@ -6,3 +6,4 @@ admin:
 john:
   name: John
   email: john@doe.com
+  admin: false

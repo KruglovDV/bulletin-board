@@ -1,4 +1,4 @@
-bool_picture:
-  name: bool_pict
-  record: bool (Bulletin)
-  blob: bool_picture_blob
+ball_picture:
+  name: image
+  record: ball (Bulletin)
+  blob: ball_picture_blob

@@ -1,7 +1,7 @@
 auto:
-  name: Автомобили
+  name: Auto
 animals:
-  name: Животные
+  name: Animals
 sport:
-  name: Спорт
+  name: Sport
 
