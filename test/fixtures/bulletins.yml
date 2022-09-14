@@ -6,3 +6,10 @@ ball:
   category: sport
   user: john
   aasm_state: draft
+
+car:
+  title: car
+  description: car
+  category: sport
+  user: john
+  aasm_state: under_moderation

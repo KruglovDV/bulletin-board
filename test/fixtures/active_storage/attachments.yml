@@ -2,3 +2,8 @@ ball_picture:
   name: image
   record: ball (Bulletin)
   blob: ball_picture_blob
+
+car_picture:
+  name: image
+  record: car (Bulletin)
+  blob: car_picture_blob
