@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     delete 'auth', to: 'auth#sign_out', as: :sign_out
     get 'profile', to: 'profile#index', as: :profile
 
-    resources :bulletins, only: %i[new create show edit update] do
+    resources :bulletins, except: %i[destroy] do
       member do
         patch 'archive'
         patch 'moderate'
