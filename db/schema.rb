@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2022_08_27_103746) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id", null: false
     t.integer "user_id", null: false
-    t.string "aasm_state"
+    t.string "state"
     t.index ["category_id"], name: "index_bulletins_on_category_id"
     t.index ["user_id"], name: "index_bulletins_on_user_id"
   end

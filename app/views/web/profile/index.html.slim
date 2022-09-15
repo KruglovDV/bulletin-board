@@ -21,7 +21,7 @@
                 - @bulletins.each do |bulletin|
                   tr
                     td = bulletin.title
-                    td = t("bulletin.states.#{bulletin.aasm_state}")
+                    td = t("bulletin.states.#{bulletin.state}")
                     td = distance_of_time_in_words_to_now bulletin.created_at
                     td
                       = link_to t('.show'), bulletin_path(bulletin), class: 'me-1'

@@ -3,7 +3,7 @@
     .col-5
       = f.input :title_cont, label: t('.search_by_name'), required: false
     .col-4
-      = f.input :aasm_state_eq, label: t('.select_state'), required: false, collection: states,
+      = f.input :state_eq, label: t('.select_state'), required: false, collection: states,
         label_method: proc { |state| t("bulletin.states.#{state}") }
     .col-3.mt-4
       = f.button :submit, class: 'btn btn-primary me-2'

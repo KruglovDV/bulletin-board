@@ -5,11 +5,11 @@ ball:
   description: ball
   category: sport
   user: john
-  aasm_state: draft
+  state: draft
 
 car:
   title: car
   description: car
   category: sport
   user: john
-  aasm_state: under_moderation
+  state: under_moderation

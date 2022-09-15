@@ -7,7 +7,7 @@ class Bulletin < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
-  aasm do
+  aasm column: :state do
     state :draft, initial: true
     state :under_moderation, :published, :rejected, :archived
 
