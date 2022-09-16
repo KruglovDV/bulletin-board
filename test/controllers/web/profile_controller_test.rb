@@ -6,10 +6,4 @@ class Web::ProfileControllerTest < ActionDispatch::IntegrationTest
     get profile_path
     assert_response :success
   end
-
-  test 'should rails error for index page if user is not signed in' do
-    assert_raises Pundit::NotAuthorizedError do
-      get profile_path
-    end
-  end
 end

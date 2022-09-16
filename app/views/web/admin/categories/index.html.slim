@@ -19,12 +19,13 @@
                 t('.edit'), \
                 edit_admin_category_path(category), \
                 class: 'me-1'
-              = link_to \
-                t('.delete'), \
-                admin_category_path(category), \
-                method: :delete, \
-                class: 'text-danger me-1', \
-                data: { confirm: t('.are_you_sure') }
+              - if category.bulletins.length == 0
+                = link_to \
+                  t('.delete'), \
+                  admin_category_path(category), \
+                  method: :delete, \
+                  class: 'text-danger me-1', \
+                  data: { confirm: t('.are_you_sure') }
   nav
     .mt-2
       = paginate @categories

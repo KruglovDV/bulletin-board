@@ -10,6 +10,7 @@ module Web
 
     def show
       @bulletin = Bulletin.find(params[:id])
+      authorize @bulletin
     end
 
     def new

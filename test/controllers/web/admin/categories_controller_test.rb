@@ -34,7 +34,7 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     update_category_params = { name: Faker::Name.name }
     patch admin_category_path(category), params: { category: update_category_params }
     category.reload
-    assert category.name == update_category_params[:name]
+    assert { category.name == update_category_params[:name] }
   end
 
   test 'should destroy category' do

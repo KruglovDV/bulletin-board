@@ -8,6 +8,6 @@ class Web::Admin::ApplicationController < Web::ApplicationController
   def authenticate_admin
     return if current_user&.admin?
 
-    redirect_to root_path
+    redirect_to root_path, alert: t('common.please_sing_in')
   end
 end

@@ -7,6 +7,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'opens bulletin page' do
+    sign_in(users(:john))
     get bulletin_path(bulletins(:ball))
     assert_response :success
   end
@@ -15,12 +16,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     sign_in(users(:john))
     get new_bulletin_path
     assert_response :success
-  end
-
-  test 'should rise error for new page if user not signed in' do
-    assert_raises Pundit::NotAuthorizedError do
-      get new_bulletin_path
-    end
   end
 
   test 'should create new bulletin' do
@@ -37,25 +32,13 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to profile_path
   end
 
-  test 'should rise error for create if user not signed in' do
-    assert_raises Pundit::NotAuthorizedError do
-      new_bulletin = {
-        title: Faker::Lorem.sentence,
-        description: Faker::Lorem.paragraph,
-        category_id: categories(:sport).id,
-        image: fixture_file_upload('ball.png', 'image/png')
-      }
-      post bulletins_path, params: { bulletin: new_bulletin }
-    end
-  end
-
   test 'should update bulletin' do
     sign_in(users(:john))
     bulletin = bulletins(:ball)
     update_bulletin_params = { title: Faker::Lorem.sentence, image: fixture_file_upload('ball.png', 'image/png') }
     patch bulletin_path(bulletin), params: { bulletin: update_bulletin_params }
     bulletin.reload
-    assert bulletin.title == update_bulletin_params[:title]
+    assert { bulletin.title == update_bulletin_params[:title] }
     assert_redirected_to profile_path
   end
 

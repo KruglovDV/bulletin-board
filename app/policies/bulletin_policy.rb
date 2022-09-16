@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class BulletinPolicy < ApplicationPolicy
+  def show?
+    @record.published? || @record.user.id == @user&.id
+  end
+
   def create?
     @user
   end
