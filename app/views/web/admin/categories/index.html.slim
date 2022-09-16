@@ -19,7 +19,7 @@
                 t('.edit'), \
                 edit_admin_category_path(category), \
                 class: 'me-1'
-              - if category.bulletins.length == 0
+              - if category.bulletins.empty?
                 = link_to \
                   t('.delete'), \
                   admin_category_path(category), \

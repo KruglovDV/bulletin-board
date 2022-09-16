@@ -1,3 +1,9 @@
+.image-box {
+  height: 190px;
+  overflow: hidden;
+}
+
 .image-box > img {
-  object-fit: cover;
+  min-width:100%;
+  min-height: 100%;
 }
