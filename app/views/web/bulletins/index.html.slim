@@ -16,8 +16,7 @@
     - @bulletins.each do |bulletin|
       .col-3.pt-2
         .card.shadow-sm
-          .image-box
-            = image_tag bulletin.image.variant(resize_to_limit: [200, 200])
+          = image_tag bulletin.image.variant(resize_to_limit: [200, 200]), height: 200
           .card-body
             = link_to bulletin_path(bulletin) do
               h5 = bulletin.title
