@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     post 'auth/:provider', to: 'auth#request', as: :auth_request
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
     delete 'auth', to: 'auth#sign_out', as: :sign_out
-    get 'profile', to: 'profile#index', as: :profile
+    get 'profile', action: :index, controller: :profile
 
-    resources :bulletins, except: %i[destroy] do
+    resources :bulletins, only: %i[index show new create edit update] do
       member do
         patch 'archive'
         patch 'moderate'

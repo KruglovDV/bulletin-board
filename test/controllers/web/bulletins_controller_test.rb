@@ -27,7 +27,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
       image: fixture_file_upload('ball.png', 'image/png')
     }
     post bulletins_path, params: { bulletin: new_bulletin }
-    created_bulletin = Bulletin.find_by(new_bulletin.slice(:title, :description, :category_id))
+    created_bulletin = Bulletin.find_by(new_bulletin.except(:image))
     assert created_bulletin
     assert_redirected_to profile_path
   end

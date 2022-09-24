@@ -1,8 +1,0 @@
-en:
-  bulletin:
-    states:
-      draft: draft
-      under_moderation: under moderation
-      published: published
-      rejected: rejected
-      archived: archived

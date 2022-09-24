@@ -19,6 +19,7 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     post admin_categories_path, params: { category: new_category }
     created_category = Category.find_by(new_category)
     assert created_category
+    assert_redirected_to admin_categories_path
   end
 
   test 'opens edit page' do
@@ -35,12 +36,14 @@ class Web::Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     patch admin_category_path(category), params: { category: update_category_params }
     category.reload
     assert { category.name == update_category_params[:name] }
+    assert_redirected_to admin_categories_path
   end
 
   test 'should destroy category' do
     sign_in(users(:admin))
-    category = categories(:sport)
+    category = categories(:auto)
     delete admin_category_path(category)
     assert_not Category.find_by(id: category.id)
+    assert_redirected_to admin_categories_path
   end
 end

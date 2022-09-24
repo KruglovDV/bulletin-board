@@ -21,3 +21,4 @@ ru:
           category_updated: Категория успешно обновлена
         destroy:
           category_deleted: Категория успешно удалена
+          cant_delete_category: Не возможно удалить категорию

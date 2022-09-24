@@ -1,4 +1,7 @@
 ru:
   common:
-    please_sing_in: Пожалуйста зарегистрируйтесь
+    please_sign_in: Пожалуйста зарегистрируйтесь
     sure?: Вы уверенны?
+    access_denied: В доступе отказано
+    not_found: Не найдено
+    bulletins_board: Доска объявлений

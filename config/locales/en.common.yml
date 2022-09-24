@@ -1,4 +1,7 @@
 en:
   common:
-    please_sing_in: Please sign in,
+    please_sign_in: Please sign in,
     sure?: Are you sure?
+    access_denied: Access denied
+    not_found: Not found
+    bulletins_board: Bulletins board

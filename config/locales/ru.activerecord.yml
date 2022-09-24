@@ -10,6 +10,12 @@ ru:
         description: Описание
         category: Категория
         image: Картинка
+        state: Статус
+        state/draft: черновик
+        state/under_moderation: на модерации
+        state/published: опубликовано
+        state/rejected: отклонено
+        state/archived: в архиве
       category:
         name: Название
     errors:

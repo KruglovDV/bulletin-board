@@ -1,18 +1,17 @@
 # frozen_string_literal: true
 
 class Web::ApplicationController < ApplicationController
-  helper_method :signed_in?
+  helper_method :signed_in?, :current_user
   rescue_from Pundit::NotAuthorizedError, with: :deny_access
+  rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
-  end
-
-  def signed_in?
-    session[:user_id].present? && current_user.present?
-  end
+  include Auth
 
   def deny_access(_exception)
-    redirect_to root_path, alert: t('common.please_sing_in')
+    redirect_to root_path, alert: t('common.access_denied')
+  end
+
+  def not_found
+    redirect_to root_path, alert: t('common.not_found')
   end
 end

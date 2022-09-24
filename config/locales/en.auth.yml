@@ -3,5 +3,6 @@ en:
     auth:
       callback:
         signed_in: Successfully signed in
+        cant_sign_in: Can't sign in
       sign_out:
         signed_out: Successfully signed out

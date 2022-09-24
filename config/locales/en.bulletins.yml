@@ -13,4 +13,10 @@ en:
       edit:
         edit_bulletin: Edit bulletin
       update:
-        bulletin_updated: Bulletin successfully updated
+        bulletin_updated: Bulletin successfully updated,
+      archive:
+        archived: Archived
+        cant_archive: Can't archive
+      moderate:
+        bulletin_under_moderation: Bulletin under moderation
+        cant_moderate: Cannot moderate bulletin

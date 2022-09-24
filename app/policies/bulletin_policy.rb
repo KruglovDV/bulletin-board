@@ -2,30 +2,26 @@
 
 class BulletinPolicy < ApplicationPolicy
   def show?
-    @record.published? || @record.user.id == @user&.id
-  end
-
-  def create?
-    @user
+    @record.published? || @record.user.id == @user&.id || @user&.admin
   end
 
   def update?
-    @user&.id == @record.user.id
+    @user&.id == @record&.user&.id
   end
 
   def archive?
-    (@user.admin? || @user.id == @record.user.id) && @record.may_archive?
+    @user.admin? || @user.id == @record.user.id
   end
 
   def publish?
-    @user.admin? && @record.may_publish?
+    @user.admin?
   end
 
   def reject?
-    @user.admin? && @record.may_reject?
+    @user.admin?
   end
 
   def moderate?
-    @user&.id == @record.user.id && @record.may_moderate?
+    @user.id == @record.user.id
   end
 end

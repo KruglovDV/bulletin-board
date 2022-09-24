@@ -21,4 +21,5 @@ en:
           category_updated: Category updated successfully
         destroy:
           category_deleted: Category deleted successfully
+          cant_delete_category: Can't delete category
         

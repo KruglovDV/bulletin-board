@@ -14,3 +14,9 @@ ru:
         edit_bulletin: Редактировать объявление
       update:
         bulletin_updated: Объявление успешно обновлено
+      archive:
+        archived: Объявление отправлено в архив
+        cant_archive: Не возможно архивировать
+      moderate:
+        bulletin_under_moderation: Объявление отправлено на модерацию
+        cant_moderate: Не возможно отправить на модерацию

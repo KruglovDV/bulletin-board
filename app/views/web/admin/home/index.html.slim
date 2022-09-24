@@ -14,11 +14,11 @@
             td = link_to bulletin.title, bulletin_path(bulletin)
             td = distance_of_time_in_words_to_now bulletin.created_at
             td
-              - if policy(bulletin).publish?
+              - if bulletin.may_publish?
                 = link_to t('.publish'), publish_admin_bulletin_path(bulletin), class: 'me-1', method: :patch
-              - if policy(bulletin).reject?
+              - if bulletin.may_reject?
                 = link_to t('.reject'), reject_admin_bulletin_path(bulletin), class: 'me-1', method: :patch
-              - if policy(bulletin).archive?
+              - if bulletin.may_archive?
                 = link_to t('.archive'), archive_admin_bulletin_path(bulletin), class: 'text-danger', method: :patch, data: { confirm: t('common.sure?') }
   nav
     .mt-2

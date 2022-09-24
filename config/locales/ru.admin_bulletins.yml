@@ -10,3 +10,12 @@ ru:
           actions: Действия
           show: Показать
           archive: Архивировать
+        publish:
+          published: Объявление опубликовано
+          cant_publish: Не возможно опубликовать
+        reject:
+          rejected: Объявление отклонено
+          cant_reject: Не возможно отклонить
+        archive:
+          archived: Объявление отправлено в архив
+          cant_archive: Не возможно отправить в архив

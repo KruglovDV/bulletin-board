@@ -10,3 +10,12 @@ en:
           actions: Actions
           show: Show
           archive: Archive
+        publish:
+          published: Bulletin published
+          cant_publish: Can't publish
+        reject:
+          rejected: Bulletin rejected
+          cant_reject: Can't reject
+        archive:
+          archived: Bulletin archived
+          cant_archive: Can't archive

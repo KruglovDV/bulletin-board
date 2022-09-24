@@ -2,6 +2,8 @@
 
 module Web
   class BulletinsController < ApplicationController
+    before_action :authenticate_user!, except: %i[index show]
+
     def index
       @q = Bulletin.ransack(params[:q])
       @bulletins = @q.result.with_attached_image.published.order('created_at DESC').page(params[:page])
@@ -14,12 +16,10 @@ module Web
     end
 
     def new
-      authorize Bulletin
       @bulletin = Bulletin.new
     end
 
     def create
-      authorize Bulletin
       @bulletin = current_user.bulletins.build(bulletin_params)
       if @bulletin.save
         redirect_to profile_path, notice: t('.bulletin_created')
@@ -46,15 +46,21 @@ module Web
     def archive
       @bulletin = current_user.bulletins.find(params[:id])
       authorize @bulletin
-      @bulletin.archive!
-      redirect_to profile_path
+      if @bulletin.archive!
+        redirect_to profile_path, notice: t('.archived')
+      else
+        redirect_to profile_path, alert: t('.cant_archive')
+      end
     end
 
     def moderate
       @bulletin = current_user.bulletins.find(params[:id])
       authorize @bulletin
-      @bulletin.moderate!
-      redirect_to profile_path
+      if @bulletin.moderate!
+        redirect_to profile_path, notice: t('.bulletin_under_moderation')
+      else
+        redirect_to profile_path, alert: t('.cant_moderate')
+      end
     end
 
     private

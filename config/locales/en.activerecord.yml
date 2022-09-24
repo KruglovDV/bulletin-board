@@ -10,6 +10,12 @@ en:
         description: Description
         category: Category
         image: Image
+        state: State
+        state/draft: draft
+        state/under_moderation: under moderation
+        state/published: published
+        state/rejected: rejected
+        state/archived: archived
       category:
         name: Name
     errors:

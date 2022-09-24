@@ -3,5 +3,6 @@ ru:
     auth:
       callback:
         signed_in: Вход успешно выполнен
+        cant_sign_in: Не получилось войти
       sign_out:
         signed_out: Выход успешно выполнен

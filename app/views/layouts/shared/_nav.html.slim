@@ -2,12 +2,12 @@
   .d-flex.flex-wrap.align-items-center.py-2.border-bottom
     .navbar.navbar-expand-md.navbar-light.me-auto
       = link_to t('.main_page'), root_path, class: 'navbar-brand me-md-4'
-      - if policy(:profile).index?
+      - if signed_in?
         = link_to t('.my_bulletins'), profile_path, class: 'nav-link text-dark'
-      - if policy(Bulletin).new?
+      - if signed_in?
         = link_to t('.add'), new_bulletin_path, class: 'nav-link text-dark'
     ul.nav.nav-pills
-      - if policy(:admin).index?
+      - if current_user&.admin?
         lin.nav-item.me-2
           = link_to t('.admin'), admin_root_path, class: 'nav-link text-dark'
       li.nav-item.me-2

@@ -1,8 +1,0 @@
-ru:
-  bulletin:
-    states:
-      draft: черновик
-      under_moderation: на модерации
-      published: опубликовано
-      rejected: отклонено
-      archived: в архиве

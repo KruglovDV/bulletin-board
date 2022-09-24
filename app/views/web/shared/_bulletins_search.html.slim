@@ -4,7 +4,7 @@
       = f.input :title_cont, label: t('.search_by_name'), required: false
     .col-4
       = f.input :state_eq, label: t('.select_state'), required: false, collection: states,
-        label_method: proc { |state| t("bulletin.states.#{state}") }
+        label_method: :human_name
     .col-3.mt-4
       = f.button :submit, class: 'btn btn-primary me-2'
       = link_to t('.reset'), url, class: 'btn btn-outline-primary'

@@ -3,34 +3,43 @@
 module Web::Admin
   class BulletinsController < ApplicationController
     def index
+      authorize Bulletin, policy_class: AdminBulletinPolicy
       @q = Bulletin.ransack(params[:q])
       @bulletins = @q.result.order('created_at DESC').page(params[:page])
-      @states = Bulletin.aasm.states.map(&:name)
+      @states = Bulletin.aasm.states
     end
 
     def archive
-      authorize_action
-      @bulletin.archive!
-      redirect_back fallback_location: root_path
+      @bulletin = Bulletin.find(params[:id])
+      authorize @bulletin
+
+      if @bulletin.archive!
+        redirect_back fallback_location: root_path, notice: t('.archived')
+      else
+        redirect_back fallback_location: root_path, alert: t('.cant_archive')
+      end
     end
 
     def publish
-      authorize_action
-      @bulletin.publish!
-      redirect_back fallback_location: root_path
+      @bulletin = Bulletin.find(params[:id])
+      authorize @bulletin
+
+      if @bulletin.publish!
+        redirect_back fallback_location: root_path, notice: t('.published')
+      else
+        redirect_back fallback_location: root_path, alert: t('.cant_publish')
+      end
     end
 
     def reject
-      authorize_action
-      @bulletin.reject!
-      redirect_back fallback_location: root_path
-    end
-
-    private
-
-    def authorize_action
       @bulletin = Bulletin.find(params[:id])
       authorize @bulletin
+
+      if @bulletin.reject!
+        redirect_back fallback_location: root_path, notice: t('.rejected')
+      else
+        redirect_back fallback_location: root_path, alert: t('.cant_reject')
+      end
     end
   end
 end
