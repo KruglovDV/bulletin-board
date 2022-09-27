@@ -4,7 +4,7 @@ module Web
   class ProfileController < ApplicationController
     before_action :authenticate_user!
 
-    def index
+    def show
       @q = current_user.bulletins.ransack(params[:q])
       @bulletins = @q.result.order('created_at DESC').page(params[:page])
       @states = Bulletin.aasm.states

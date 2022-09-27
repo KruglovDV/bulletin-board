@@ -3,10 +3,12 @@
 Rails.application.routes.draw do
   scope module: :web do
     root 'bulletins#index'
+
     post 'auth/:provider', to: 'auth#request', as: :auth_request
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
     delete 'auth', to: 'auth#sign_out', as: :sign_out
-    get 'profile', action: :index, controller: :profile
+
+    resource :profile, only: %i[show], controller: 'profile'
 
     resources :bulletins, only: %i[index show new create edit update] do
       member do

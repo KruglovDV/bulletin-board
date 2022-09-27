@@ -3,8 +3,8 @@
 module Web
   class AuthController < ApplicationController
     def callback
-      @user = User.find_by(email: user_params[:email])
-      @user = User.new(user_params) if @user.nil?
+      @user = User.find_or_initialize_by(email: user_params[:email])
+      @user.name = user_params[:name]
 
       if @user.save
         create_session(@user)

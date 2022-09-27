@@ -2,7 +2,9 @@
 
 module Web
   class BulletinsController < ApplicationController
-    before_action :authenticate_user!, except: %i[index show]
+    include Pundit::Authorization
+
+    before_action :authenticate_user!, only: %i[new create edit update archive moderate]
 
     def index
       @q = Bulletin.ransack(params[:q])
@@ -46,7 +48,8 @@ module Web
     def archive
       @bulletin = current_user.bulletins.find(params[:id])
       authorize @bulletin
-      if @bulletin.archive!
+      if @bulletin.may_archive?
+        @bulletin.archive!
         redirect_to profile_path, notice: t('.archived')
       else
         redirect_to profile_path, alert: t('.cant_archive')
@@ -56,7 +59,8 @@ module Web
     def moderate
       @bulletin = current_user.bulletins.find(params[:id])
       authorize @bulletin
-      if @bulletin.moderate!
+      if @bulletin.may_moderate?
+        @bulletin.moderate!
         redirect_to profile_path, notice: t('.bulletin_under_moderation')
       else
         redirect_to profile_path, alert: t('.cant_moderate')

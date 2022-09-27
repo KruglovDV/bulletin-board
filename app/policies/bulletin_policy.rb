@@ -2,15 +2,15 @@
 
 class BulletinPolicy < ApplicationPolicy
   def show?
-    @record.published? || @record.user.id == @user&.id || @user&.admin
+    @record.published? || record_belongs_to_user? || @user&.admin
   end
 
   def update?
-    @user&.id == @record&.user&.id
+    record_belongs_to_user?
   end
 
   def archive?
-    @user.admin? || @user.id == @record.user.id
+    @user.admin? || record_belongs_to_user?
   end
 
   def publish?
@@ -22,6 +22,12 @@ class BulletinPolicy < ApplicationPolicy
   end
 
   def moderate?
-    @user.id == @record.user.id
+    record_belongs_to_user?
+  end
+
+  private
+
+  def record_belongs_to_user?
+    @user&.id == @record&.user_id
   end
 end

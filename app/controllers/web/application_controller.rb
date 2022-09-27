@@ -7,7 +7,7 @@ class Web::ApplicationController < ApplicationController
 
   include Auth
 
-  def deny_access(_exception)
+  def deny_access
     redirect_to root_path, alert: t('common.access_denied')
   end
 
