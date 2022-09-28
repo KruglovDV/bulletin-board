@@ -10,15 +10,7 @@ class BulletinPolicy < ApplicationPolicy
   end
 
   def archive?
-    @user.admin? || record_belongs_to_user?
-  end
-
-  def publish?
-    @user.admin?
-  end
-
-  def reject?
-    @user.admin?
+    record_belongs_to_user?
   end
 
   def moderate?
