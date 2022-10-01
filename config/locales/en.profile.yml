@@ -1,7 +1,7 @@
 en:
   web:
     profile:
-      index:
+      show:
         my_bulletins: My bulletins
         add_bulletin: Add bulletin
         name: Name
@@ -12,3 +12,6 @@ en:
         archive: Archive
         edit: Edit
         moderate: Moderate
+        search_by_name: Search by name
+        reset: Reset
+        select_state: Select state

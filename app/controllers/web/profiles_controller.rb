@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Web
-  class ProfileController < ApplicationController
+  class ProfilesController < ApplicationController
     before_action :authenticate_user!
 
     def show

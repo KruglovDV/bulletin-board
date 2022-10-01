@@ -1,7 +1,7 @@
 ru:
   web:
     profile:
-      index:
+      show:
         my_bulletins: Мои объявления
         add_bulletin: Добавить обявление
         name: Название
